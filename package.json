@@ -1,0 +1,29 @@
+{
+  "name": "strained-cropper",
+  "version": "1.0.0",
+  "description": "App to cropp images for vk page /vk.com/",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malefique/strained-cropper.git"
+  },
+  "keywords": [
+    "imagemagick",
+    "cropp",
+    "images"
+  ],
+  "author": "Oleg M",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/malefique/strained-cropper/issues"
+  },
+  "homepage": "https://github.com/malefique/strained-cropper#readme",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "chokidar": "^1.6.1",
+    "imagemagick-stream": "^4.1.1"
+  }
+}
