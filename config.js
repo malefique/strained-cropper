@@ -27,6 +27,7 @@ config.watchers = [
         pattern: new RegExp(config.mediaPath+'\/((.*?)(city|region|country)\_(.*?)\/|)','i'),
         rootPath: config.mediaPath,
         resizePath: 'resized',
+        sourcePath: 'source',
         dimension: config.dimensions.default
     }
 ];

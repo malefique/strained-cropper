@@ -1,16 +1,24 @@
 const ctrl = require('./controllers'),
-    fs = require('fs');
+    ch = require('chokidar');
 
 let matchedDirectories = [];
 
 ctrl.helpers.getDirs((err,dirs)=>{
     matchedDirectories = dirs;
-    for( var i in matchedDirectories){
-        fs.watch(matchedDirectories[i], (eventType, filename) => {
-            ctrl.helpers.resize(filename,()=>{
-                console.log('resized');
-            });
+    for( let i in matchedDirectories){
+        console.log('Started to watch ' +matchedDirectories[i].path)
+        ch.watch(matchedDirectories[i].path,{ignored: /[\/\\]\./, ignoreInitial: true}).on('all', (event,filename) => {
+            switch(event){
+                case 'add':
+                case 'change':
+                    ctrl.helpers.resize(filename,matchedDirectories[i].params,()=>{
+                        console.log('resized');
+                    });
+                    break;
+                default:
+                    break;
+            };
+
         });
     }
-    console.log(matchedDirectories);
 });
