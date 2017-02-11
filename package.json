@@ -1,7 +1,7 @@
 {
   "name": "strained-cropper",
   "version": "1.0.0",
-  "description": "App to cropp images for vk page /vk.com/",
+  "description": "App to cropp images for vk page /vk.com/napryajenochka/",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
